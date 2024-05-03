@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go To Lume</title>
+    <link rel="icon" type="image/x-icon" href="images/GoToLumeLogo.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand"><img class="logoo" src="images/GoToLumeLogonbg.png"></a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">Menu</a>
+          <a href="#">Cart</a>
+          <a href="#">About us</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <img class="delicacyPic-slide active" src="images/lomibs.png"></img>
+      <img class="delicacyPic-slide" src="images/gotobs.png"></img>
+      <img class="delicacyPic-slide" src="images/bulalobs.png"></img>
+      <img class="delicacyPic-slide" src="images/chamims.png"></img>
+      <img class="delicacyPic-slide" src="images/tapams.png"></img>
+      <div class="content active">
+        <h1>Go to lume<br><span>lomi batangas</span></h1>
+        <p>A steaming bowl of authentic Batangas Lomi can lift anyone’s spirits during a rainy day. Its rich, thick broth and variety of toppings make it a tasty treat for every foodie. There are various variations of the dish, but the original Lomi Batangas is the most popular. Try our best selling Lomi in Go To Lume.</p>
+        <a href="#">Order Now</a>
+      </div>
+      <div class="content">
+        <h1>Go to lume<br><span>Goto Batangas</span></h1>
+        <p> It does away with rice. Apart from this distinguishing feature, the steaming hot broth of goto originating from Lipa City is uncharacteristically greasy and full of flavor. Perfect for cold weather or for any type of occasion, the rich broth is accompanied with tender slices of beef tripe and innards. It’s typically paired with a soy dipping sauce topped with slices of fresh onions, chili, and calamansi.</p>
+        <a href="#">Order Now</a>
+      </div>
+      <div class="content">
+        <h1>Go to lume<br><span>batangas bulalo</span></h1>
+        <p>Its main and most distinct ingredient is beef shanks simmered for several hours in a flavorful stock seasoned with black pepper, garlic, onions, and salt. The dish typically comes with pechay, potatoes, and even corn. You’ll know the rich bowl of bulalo soup you have in front of you is genuine when the unmistakably tender meat starts falling off the bones. Pair the dish with a sauce made out of patis, calamansi, and chili and it’s heaven on a plate.</p>
+        <a href="#">Order Now</a>
+      </div>
+      <div class="content">
+        <h1>Go to lume<br><span>Chicken chami</span></h1>
+        <p>Pancit Chami is made with thick and chewy noodles stir-fried with an assortment of vegetables and chicken. The flavors are enhanced by a combination of soy sauce, oyster sauce, and other seasonings, resulting in a savory and aromatic dish that is truly satisfying. Whether enjoyed on its own or as a companion to other dishes, Pancit Chami at Go to Batangas is an indulgence that will leave you wanting more.</p>
+        <a href="#">Order Now</a>
+      </div>
+      <div class="content">
+        <h1>Go to lume.<br><span>Tapang Taal</span></h1>
+        <p>An unique sweet-style preparation, combining succulent pork with a marinade that includes soy sauce, calamansi, and a generous amount of garlic. This flavorful concoction results in a tender and savory pork dish with a citrusy kick, a true sensory delight for the taste buds. Tapang Taal is not merely a dish; it holds cultural significance in Batangas. Reflecting the resourcefulness of locals, this dish has become a symbol of culinary heritage, often served during special occasions and family gatherings. Passed down through generations, Tapang Taal represents the warmth and hospitality ingrained in the culture of Taal.</p>
+        <a href="#">Order Now</a>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fa fa-address-book"></i></a>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".delicacyPic-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
